@@ -7,6 +7,7 @@ export const UsersList = () => {
   const users = useSelector(selectAllUsers)
 
   const renderedUsers = users.map(user => (
+    alert(users)
     <li key={user.id}>
       <Link to={`/users/${user.id}`}>{user.name}</Link>
     </li>

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { unwrapResult } from '@reduxjs/toolkit'
 import { addNewPost } from './postSlice'
-import { postAdded } from './postSlice'
 
 export const AddPostForm = () => {
   const [title, setTitle] = useState('')
@@ -39,16 +38,6 @@ const onSavePostClicked = async () => {
     }
   }
 }
-
-  // const onSavePostClicked = () => {
-  //   if (title && content) {
-  //     dispatch(postAdded(title, content, userId))
-  //     setTitle('')
-  //     setContent('')
-  //   }
-  // }
-
-  // const canSave = Boolean(title) && Boolean(content) && Boolean(userId)
 
   const usersOptions = users.map(user => (
     <option key={user.id} value={user.id}>
